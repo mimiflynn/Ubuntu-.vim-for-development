@@ -35,7 +35,7 @@ map <leader>o :tabedit<Space>
 map <leader>t :CommandT<CR>
 
 " Open a custom Commad-T instace with \T
-map <leader>T :CommandT<Space>~/www/
+map <leader>T :CommandT<Space>/var/www/
 
 " Open files verticall quickly with \v.
 map <leader>v :vsplit<Space>
@@ -89,17 +89,12 @@ endif
 
 "Set autoindent
 set ai
-"set case-insensitive searching
-set ignorecase
 
 "Appearance
 set lines=40
 set columns=100
-"set guifont=Monaco:h14
 set guioptions-=T
 set background=dark
-"set transparency=5
-"colorscheme cobalt
 
 "highlight current line
 set cursorline
