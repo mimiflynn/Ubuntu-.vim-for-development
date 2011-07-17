@@ -866,10 +866,8 @@ function! s:TreeFileNode.copy(dest)
     let parent = b:NERDTreeRoot.findNode(newPath.getParent())
     if !empty(parent)
         call parent.refresh()
-        return parent.findNode(newPath)
-    else
-        return {}
     endif
+    return parent.findNode(newPath)
 endfunction
 
 "FUNCTION: TreeFileNode.delete {{{3
@@ -993,7 +991,7 @@ function! s:TreeFileNode.getLineNum()
     "the path components we have matched so far
     let pathcomponents = [substitute(b:NERDTreeRoot.path.str({'format': 'UI'}), '/ *$', '', '')]
     "the index of the component we are searching for
-    let curPathComponent = 1
+    let curPathComponent = 0
 
     let fullpath = self.path.str({'format': 'UI'})
 

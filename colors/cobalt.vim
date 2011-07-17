@@ -36,8 +36,8 @@ endif
 
 let g:colors_name="cobalt"
 
-hi Normal         guifg=#FFFFFF           guibg=#00203F"#002F52 - MF change 
-hi NonText        guifg=#FFFFFF           guibg=#00203F"#002F52 - MF change
+hi Normal         guifg=#FFFFFF           guibg=#00203F "#002F52 - mf
+hi NonText        guifg=#FFFFFF           guibg=#00203F "#002F52 - mf
 hi CursorLine     guifg=NONE              guibg=#002943
 hi Cursor         guifg=#F8F8F8           guibg=#A7A7A7
 hi CursorIM       guifg=#F8F8F8           guibg=#002947"#5F5A60
