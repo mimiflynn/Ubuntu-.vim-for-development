@@ -91,7 +91,7 @@ endif
 set ai
 
 "Appearance
-set lines=40
+set lines=60
 set columns=100
 set guioptions-=T
 set background=dark
