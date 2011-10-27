@@ -162,12 +162,12 @@ set ai
 set ignorecase
 
 "Appearance
-set lines=40
-set columns=120
+set lines=80
+set columns=140
 "set guifont=Monaco:h14
 set guioptions-=T
 "set background=dark
-"set transparency=5
+set transparency=5
 colorscheme cobalt
 
 "highlight current line
@@ -207,3 +207,7 @@ map! <D-6> <C-O>:tabn 6<CR>
 map! <D-7> <C-O>:tabn 7<CR>
 map! <D-8> <C-O>:tabn 8<CR>
 map! <D-9> <C-O>:tabn 9<CR>
+
+" When gvimrc is edited, reload it
+autocmd! bufwritepost .gvimrc source ~/.gvimrc
+" Or maybe: autocmd BufWritePost .gvimrc source %

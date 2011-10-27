@@ -76,11 +76,11 @@ map <c-space> ?
 set wildignore+=*.o,*.obj,.git,.hg/**,*.pyc,*.png,*.gif,*.jpg,*.jpeg,*.egg-info/**,*.mo
 let g:CommandTAcceptSelectionTabMap='<CR>'
 
-hi ColorColumn ctermbg=234
-
-if version >= 703
-  set colorcolumn=81,82
-endif
+"hi ColorColumn ctermbg=234
+"
+"if version >= 703
+"  set colorcolumn=81,82
+"endif
 
 " MF additions (above is silvio's)
 
@@ -91,8 +91,8 @@ endif
 set ai
 
 "Appearance
-set lines=60
-set columns=100
+set lines=80
+set columns=140
 set guioptions-=T
 set background=dark
 
