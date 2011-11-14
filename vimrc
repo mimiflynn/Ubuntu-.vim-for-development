@@ -91,8 +91,8 @@ let g:CommandTAcceptSelectionTabMap='<CR>'
 set ai
 
 "Appearance
-set lines=80
-set columns=140
+"set lines=80
+"set columns=140
 set guioptions-=T
 set background=dark
 
