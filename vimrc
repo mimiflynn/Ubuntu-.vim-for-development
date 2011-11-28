@@ -35,7 +35,7 @@ map <leader>o :tabedit<Space>
 map <leader>t :CommandT<CR>
 
 " Open a custom Commad-T instace with \T
-map <leader>T :CommandT<Space>/var/www/
+map <leader>T :CommandT<Space>~/devel/nyx.com/trunk/drupal/publish/sites/
 
 " Open files verticall quickly with \v.
 map <leader>v :vsplit<Space>
@@ -59,6 +59,7 @@ autocmd! bufwritepost .vimrc source ~/.vimrc
 set ignorecase
 set smartcase
 set incsearch
+set hlsearch
 
 " Turn backup off, since most stuff is in SVN, git anyway...
 set nobackup

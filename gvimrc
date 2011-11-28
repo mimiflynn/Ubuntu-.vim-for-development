@@ -186,7 +186,7 @@ hi cursorline guibg=#7F3700
 
 "NERDTreeBookmarks
 
-let NERDTreeQuitOnOpen = 0
+let NERDTreeQuitOnOpen = 1
 
 map <D-1> :tabn 1<CR>
 map <D-2> :tabn 2<CR>
