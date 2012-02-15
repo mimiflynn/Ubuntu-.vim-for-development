@@ -79,9 +79,9 @@ let g:CommandTAcceptSelectionTabMap='<CR>'
 
 "hi ColorColumn ctermbg=234
 "
-"if version >= 703
-"  set colorcolumn=81,82
-"endif
+if version >= 703
+  set colorcolumn=81,82
+endif
 
 " MF additions (above is silvio's)
 
