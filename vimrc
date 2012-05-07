@@ -1,5 +1,6 @@
 set t_Co=256
-colorscheme ir_black
+"colorscheme ir_black
+colorscheme ambient
 
 set tabstop=2
 set softtabstop=2
@@ -35,7 +36,7 @@ map <leader>o :tabedit<Space>
 map <leader>t :CommandT<CR>
 
 " Open a custom Commad-T instace with \T
-map <leader>T :CommandT<Space>~/devel/nyx.com/trunk/drupal/publish/sites/
+map <leader>T :CommandT<Space>~/Sites
 
 " Open files verticall quickly with \v.
 map <leader>v :vsplit<Space>
@@ -79,9 +80,9 @@ let g:CommandTAcceptSelectionTabMap='<CR>'
 
 "hi ColorColumn ctermbg=234
 "
-"if version >= 703
-"  set colorcolumn=81,82
-"endif
+if version >= 703
+  set colorcolumn=81,82
+endif
 
 " MF additions (above is silvio's)
 
@@ -102,6 +103,7 @@ set cursorline
 
 "highlight bg color of current line
 hi cursorline guibg=#0F3959
+hi colorcolumn guibg=#666666
 
 " Enable use of the mouse for all modes
 set mouse=a
