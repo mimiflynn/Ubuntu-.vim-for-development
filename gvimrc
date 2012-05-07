@@ -153,6 +153,10 @@ nnoremap <C-L> :nohl<CR><C-L>
 
 "------------------------------------------------------------
 
+if version >= 703
+  set colorcolumn=81,82
+endif
+
 "Enable Spell check
 set spell
 
@@ -175,7 +179,7 @@ set cursorline
 
 "highlight bg color of current line
 hi cursorline guibg=#7F3700
-"hi cursorline guibg=#BB7711
+hi colorcolumn guibg=#020236
 
 "autocmd FileType javascript,css,php colorscheme cobalt
 "autocmd FileType javascript,css,php syntax on
@@ -210,4 +214,3 @@ map! <D-9> <C-O>:tabn 9<CR>
 
 " When gvimrc is edited, reload it
 autocmd! bufwritepost .gvimrc source ~/.gvimrc
-" Or maybe: autocmd BufWritePost .gvimrc source %

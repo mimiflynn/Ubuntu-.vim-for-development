@@ -107,3 +107,20 @@ hi colorcolumn guibg=#666666
 
 " Enable use of the mouse for all modes
 set mouse=a
+
+function! VisualTagsWrap()
+        if !exists('g:tags_to_wrap')
+            let g:tags_to_wrap=[]
+        endif
+        let g:tags_to_wrap=split(input('space separated tags to wrap block: ', join(g:tags_to_wrap, ' ')), '\s\+')
+        if len(g:tags_to_wrap)>0
+            execute 'normal! `>a</'.join(reverse(g:tags_to_wrap), '></').'>'
+            execute 'normal! `<i<'.join(reverse(g:tags_to_wrap), '><').'>'
+        endif
+    endfunction
+
+
+vnoremap <silent>,w <ESC>:call VisualTagsWrap()<CR>
+
+vmap blame :<C-U>!svn blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
+
