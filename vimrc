@@ -1,6 +1,6 @@
 set t_Co=256
-"colorscheme ir_black
-colorscheme ambient
+colorscheme ir_black
+"colorscheme ambient
 
 set tabstop=2
 set softtabstop=2
@@ -102,22 +102,22 @@ set background=dark
 set cursorline
 
 "highlight bg color of current line
-hi cursorline guibg=#0F3959
-hi colorcolumn guibg=#666666
+hi cursorline ctermbg=black
+hi colorcolumn ctermbg=234
 
 " Enable use of the mouse for all modes
 set mouse=a
 
 function! VisualTagsWrap()
-        if !exists('g:tags_to_wrap')
-            let g:tags_to_wrap=[]
-        endif
-        let g:tags_to_wrap=split(input('space separated tags to wrap block: ', join(g:tags_to_wrap, ' ')), '\s\+')
-        if len(g:tags_to_wrap)>0
-            execute 'normal! `>a</'.join(reverse(g:tags_to_wrap), '></').'>'
-            execute 'normal! `<i<'.join(reverse(g:tags_to_wrap), '><').'>'
-        endif
-    endfunction
+  if !exists('g:tags_to_wrap')
+      let g:tags_to_wrap=[]
+  endif
+  let g:tags_to_wrap=split(input('space separated tags to wrap block: ', join(g:tags_to_wrap, ' ')), '\s\+')
+  if len(g:tags_to_wrap)>0
+      execute 'normal! `>a</'.join(reverse(g:tags_to_wrap), '></').'>'
+      execute 'normal! `<i<'.join(reverse(g:tags_to_wrap), '><').'>'
+  endif
+endfunction
 
 
 vnoremap <silent>,w <ESC>:call VisualTagsWrap()<CR>
