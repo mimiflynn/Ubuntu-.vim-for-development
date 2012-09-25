@@ -166,12 +166,12 @@ set ai
 set ignorecase
 
 "Appearance
-set lines=80
-set columns=140
+set lines=38
+set columns=100
 "set guifont=Monaco:h14
 set guioptions-=T
 "set background=dark
-set transparency=5
+"set transparency=5
 colorscheme cobalt
 
 "highlight current line

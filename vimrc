@@ -124,3 +124,5 @@ vnoremap <silent>,w <ESC>:call VisualTagsWrap()<CR>
 
 vmap blame :<C-U>!svn blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
 
+let g:CommandTAcceptSelectionMap = '<C-t>'
+let g:CommandTAcceptSelectionTabMap = '<CR>'
