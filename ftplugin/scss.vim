@@ -1,12 +1,6 @@
-" Vim filetype plugin
-" Language:	SCSS
-" Maintainer:	Tim Pope <vimNOSPAM@tpope.org>
-" Last Change:	2010 Jul 26
-
-if exists("b:did_ftplugin")
+if exists('b:did_indent') && b:did_indent
+  " be kind. allow users to override this. Does it work?
   finish
 endif
 
-runtime! ftplugin/sass.vim
-
-" vim:set sw=2:
+setlocal indentexpr=scss_indent#GetIndent(v:lnum)
